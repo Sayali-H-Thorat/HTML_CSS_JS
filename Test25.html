@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and text shadows</title>
+</head>
+<style>
+    .container {
+        display: flex;
+    }
+
+    .card {
+        /* border:2px solid black ; */
+        padding: 23px 12px;
+        margin: 23px 12px;
+        background-color: darkcyan;
+
+        /* Below all syntax for box shadows */
+        /* positive numbers give the shadow from downside
+            /* box-shadow:offset-x offset-y color; */
+        /* box-shadow: 6px 7px green; */
+
+        /* negative numbers give the shadow from upside */
+        /* box-shadow: -6px -7px green; */
+
+        /* In below syntax 10px is used to blur the color of shadow  same is applicable for negative numbers (box-shadow: -6px -7px 10px green)*/
+        /* box-shadow:offset-x offset-y blur-radius color; */
+        /* box-shadow: 6px 7px 10px green;  */
+
+        /* here 4th option is used for spreading the shadow from all four sides */
+        /* box-shadow:offset-x offset-y blur-radius spread-radius color; */
+        /* box-shadow: 6px 7px 10px 10px green; */
+
+        /* in rgba a-alpha is used for darkness */
+        box-shadow: 6px 7px 1px 10px rgba(71, 172, 184, 0.6);
+
+        /* box-shadow: inset 2px 3px cyan; it is used for display shadow from inner side */
+        box-shadow: inset 5px 6px rgb(22, 224, 15);
+
+        /* We can use multiple colors for box shadow */
+        box-shadow: 6px 7px rgb(108, 231, 180), 7px 8px rgb(18, 3, 53);
+    }
+
+    .card h2 {
+        /* Below syntax for text shadow */
+        text-shadow: 1px 2px rgb(218, 209, 209);
+
+        /* We can blur the text shadow also */
+        text-shadow: 1px 2px 3px rgb(218, 209, 209);
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>This is C Programming</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dignissimos quaerat neque minus
+                quisquam, soluta voluptatibus. Molestias, quod iusto dolore aperiam consequuntur tenetur veniam eos,
+                temporibus enim quam sunt aut magnam. Nesciunt, molestiae architecto.</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>This is C++ Programming</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dignissimos quaerat neque minus
+                quisquam, soluta voluptatibus. Molestias, quod iusto dolore aperiam consequuntur tenetur veniam eos,
+                temporibus enim quam sunt aut magnam. Nesciunt, molestiae architecto.</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>This is Java Programming</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dignissimos quaerat neque minus
+                quisquam, soluta voluptatibus. Molestias, quod iusto dolore aperiam consequuntur tenetur veniam eos,
+                temporibus enim quam sunt aut magnam. Nesciunt, molestiae architecto.</p>
+        </div>
+    </div>
+</body>
+
+</html>

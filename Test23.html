@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute and nth child psuedo selectors</title>
+</head>
+<style>
+    .container {
+        display: block;
+        margin: auto;
+        width: 233px;
+    }
+
+    input {
+        display: block;
+    }
+
+    /* psuedo selectors */
+    /* It is applicable for input whose type is text only */
+    input[type='text'] {
+        padding: 15px;
+        border: 2px solid black;
+    }
+
+    /* It is applicable for the anchor whose target is set */
+    a[target] {
+        font-size: 45px;
+        color: blueviolet;
+    }
+
+    /* It gets applicable for the anchor tag whose target is _self */
+    a[target="_self"] {
+        font-size: 30px;
+        color: rgb(9, 34, 80);
+    }
+
+    input[type="email"] {
+        color: black;
+        border: 2px solid rgb(2, 4, 10);
+    }
+
+    /* nth child psuedo selectors  */
+    /* This will apply css for third child only */
+    li:nth-child(3) {
+        color: rgb(236, 9, 9);
+    }
+
+    /* This css will applicable for every 2nd child of li */
+    li:nth-child(2n+0) {
+        color: rgb(9, 236, 39);
+    }
+
+    /* Below css applibale for odd child */
+    li:nth-child(odd) {
+        background-color: aquamarine;
+        border: 2px solid rgb(17, 17, 17);
+        padding: 2px;
+    }
+
+    /* Below css applibale for even child */
+    li:nth-child(even) {
+        background-color: rgb(15, 151, 67);
+        border: 2px solid rgb(216, 21, 21);
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <!-- target="_blank" opens the link on new tab -->
+        <h1><a href="http://google.com" target="_blank">Go to google</a></h1>
+        <h1><a href="http://facebook.com" target="_self">Go to facebook</a></h1>
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your name">
+            <input type="email" placeholder="Enter your email">
+            <input type="password" placeholder="Enter your password">
+            <input type="submit" class="submit">
+        </form>
+
+        <ul>
+            <li class="item" id="item-1">Item1</li>
+            <li class="item" id="item-2">Item2</li>
+            <li class="item" id="item-3">Item3</li>
+            <li class="item" id="item-4">Item4</li>
+            <li class="item" id="item-5">Item5</li>
+            <li class="item" id="item-6">Item6</li>
+            <li class="item" id="item-7">Item7</li>
+            <li class="item" id="item-8">Item8</li>
+            <li class="item" id="item-9">Item9</li>
+            <li class="item" id="item-10">Item10</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

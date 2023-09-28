@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyFrames and Animations</title>
+</head>
+<style>
+    .container {
+        /* display: flex; */
+        background-color: blueviolet;
+    }
+
+    .box {
+        background-color: aquamarine;
+        width: 250px;
+        height: 250px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        position: relative;
+        /* Name the animation */
+        /* animation-name: sayali1; */
+        animation-name: sayali2;
+        /* Duration of animation  */
+        animation-duration: 6s;
+        /* Iteration of count */
+        animation-iteration-count: 10;
+        /* fill mode is from forward,backword,both */
+        animation-fill-mode:backwards;
+        /* for timing function we can use ease functions  */
+        animation-timing-function:ease-in-out;
+        /* we can use time delay for start the animation  */
+        animation-delay: 1s;
+        /* We can choose the direction for animation as reverse,alternate,alternate-reverse */
+        /* animation-direction:alternate-reverse; */
+
+        /* Shorthand proprties for animation */
+        /* animation:animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-fill-mode animation-direction; */
+
+        /* animation: sayali2 5s ease-in-out 1s 10 forwards alternate; */
+    }
+    @keyframes sayali2 {
+        0%{
+            top: 0px;
+            left: 0px;
+        }
+        25%{
+            top: 400px;
+            left: 0px;
+        }
+        75%{
+            top: 400px;
+            left: 400px;
+        }
+        100%{
+            top: 0px;
+            left: 400px;
+        }        
+    }
+
+    @keyframes sayali1 {
+        from {
+            width: 200px;
+
+        }
+
+        to {
+            width: 900px;
+
+        }
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>This is a box</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi dicta quidem minus suscipit neque
+                facere tenetur culpa, illum ullam in, ratione, quos quisquam cumque quo eum molestiae minima autem dolor
+                mollitia provident vero similique?</p>
+        </div>
+    </div>
+
+</body>
+
+</html>

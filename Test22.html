@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on selectors</title>
+</head>
+<style>
+    h1 {
+        background-color: aquamarine;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    /* This affect only for paragraph which is inside li */
+    /* if p is contained by any li which is contained by div */
+    /* div li p{
+            color: black;
+            background-color: yellow;
+            font-weight: bold;
+        } */
+
+    /* This is applicable for all the paragraphs inside div tag */
+    /* div p{
+            color: rgb(1, 1, 2);
+            font-weight: bold;
+            background-color: rgb(143, 227, 238);
+        } */
+
+    /* To access direct child we have to use > symbol */
+    /* if p is right inside div then this css will get applied */
+    /* div > p{
+            color: rgb(1, 1, 2);
+            font-weight: bold;
+            background-color: rgb(143, 227, 238);
+        } */
+
+    /* if before sibling of p is div then this property will get applicable */
+    /* if p is right after div i.e. p is the next sibling of div */
+    div+p {
+        color: black;
+        background-color: rgb(212, 79, 195);
+    }
+</style>
+
+<body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item">
+                    <p>This is li paragraph</p>
+                </li>
+                <li class="item">This will not get affected</li>
+            </ul>
+            <p>This is first paragraph</p>
+        </div>
+        <p>This is second paragraph</p>
+    </div>
+    <p>This is outermost paragraph</p>
+
+</body>
+
+</html>

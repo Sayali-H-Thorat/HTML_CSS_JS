@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS transitions</title>
+</head>
+<style>
+    /* We can make transition for opacity height width margin font-size etc. Don't do transiotion on binary*/
+    #box {
+        display: flex;
+        height: 200px;
+        width: 200px;
+        background-color: rgb(16, 240, 109);
+        justify-content: center;
+        /* align-items: center; keeps text in center from all four sides */
+        align-items: center;
+        transition-property: background-color;
+        /* transition-duration: 3s; transition is completed in 3 sec */
+        transition-duration: 3s;
+        /* ease-in-out start and end transition slowly and in middle fast */
+        /* ease-in start slowly end fast */
+        /* ease-out  start fast end slowly*/
+        transition-timing-function: ease-in-out;
+        /* transition-delay: 1s; hover kelyavr Kiti vela ne transition start honar*/
+        transition-delay: 1s;
+
+        /* shorthand property for transition */
+        /* transition: transition-property transition-duration transition-timing-function transition-delay; */
+        /* transition: background-color 3s ease-in-out 1s; */
+        /* For including all the transition properties we have to write property name as all */
+        transition: all 1s ease-in 1s;
+    }
+
+    #box:hover {
+        background-color: aquamarine;
+        height: 400px;
+        width: 400px;
+        border-radius: 50px;
+        font-size: 25px;
+    }
+
+    
+</style>
+
+<body>
+    <h3>This is CSS transition Tutorial</h3>
+    <div class="container">
+        <div id="box">
+            This is my Box
+        </div>
+    </div>
+</body>
+
+</html>
