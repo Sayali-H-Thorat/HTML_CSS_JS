@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Background</title>
+    <style>
+        h1{
+            background-color: rgb(136, 170, 132);
+            text-align: center;
+            display: inline-flex;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background: url(Balloons1.jpg);
+            font-size: 10rem;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: #07070738;
+            animation: move 55s linear infinite;
+            letter-spacing: .9rem;
+        }
+        @keyframes move{
+            from{background-position: 0 80%;}
+            to{background-position: 100% 50%;}
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Moving Background</h1>
+</body>
+</html>
